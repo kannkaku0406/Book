@@ -8,7 +8,7 @@ def dfs(board, depth, x, y, k):
     if dfs(board, depth+1, x+1, y, k) or dfs(board, depth+1, x-1, y, k) or dfs(board, depth+1, x, y+1, k) or dfs(board, depth+1, x, y-1, k):
         print(x+1, y+1)
         return True
-    board[x][y] = '#'　// 正解を見つけた時、再帰処理にてこの行は実行されないから、boardは全部・になる。
+    board[x][y] = '#'　#正解を見つけた時、再帰処理にてこの行は実行されないから、boardは全部・になる。
 H, W = map(int, input().split())
 board = [list(input()) for i in range(H)]
 k = 0
